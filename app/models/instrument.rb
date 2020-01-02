@@ -3,6 +3,7 @@ class Instrument < ApplicationRecord
   serialize :image, JSON # if use SQLITE, add this line
 
   belongs_to :user, optional: true
+  has_many :line_items
 
   validates :title, :brand, :price, :model, presence: true
   validates :description, length: { maximum: 1000, too_long:

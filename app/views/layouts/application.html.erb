@@ -8,6 +8,7 @@
     <meta name="viewport" content="width=device-width", inital-scale="1">
     <%= stylesheet_link_tag 'https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' %>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
   </head>
 
@@ -23,7 +24,7 @@
       </div>
     <%end %>
 
-    <nav class="navbar is-wraning" role="navigation" aria-label="main navigation">
+    <nav class="navbar is-wraning na-one" role="navigation" aria-label="main navigation" >
       <div class="navbar-brand">
         <%= link_to root_path, class: "navbar-item" do %>
           <h1 class="title is-5">E-buy</h1>
@@ -54,7 +55,7 @@
 
               <% if user_signed_in? %>
                 <!-- new_instrument_path -->
-                <%= link_to 'Sell', '#', class: 'navbar-item button is dark' %>
+                <%= link_to 'Sell', new_instrument_path, class: "navbar-item button is-dark" %>
 
                 <div class="navbar-item has-dropdown is-hoverable">
                   <%= link_to 'Account',edit_user_registration_path, class: 'navbar-link' %>
@@ -78,6 +79,5 @@
     <div class="container">
       <%= yield %>
     </div>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </body>
 </html>

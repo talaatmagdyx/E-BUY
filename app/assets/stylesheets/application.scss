@@ -20,7 +20,11 @@ $link-hover: #222;
 @import "bulma";
 @import "functions";
 
-.na-one{
+.na-on{
+  background-color:#FFDD57;
+}
+.na-one:link, .na-one:visited,
+.na-one:hover, .na-one:active{
   background-color:#FFDD57;
 }
 .notification {
